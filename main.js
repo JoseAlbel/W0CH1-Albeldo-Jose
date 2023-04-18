@@ -35,23 +35,15 @@ totalDeck("spades");
 totalDeck("clovers");
 totalDeck("diamonds");
 
-console.log(deck);
-console.log(deck.value);
-
 const getRandomCard1 = () => {
   let randomCard1 = Math.floor(Math.random() * 52);
   myCard1 = deck[randomCard1];
-  console.log(myCard1);
-  //console.log(deck[randomCard1]); Es igual que myCArd1
   console.log(`Tu carta es ${myCard1.value} ${myCard1.symbol}`);
-  console.log(myCard1.value); //saca el número en consola
-  //console.log(typeof myCard1.value) //(nümero)
 };
 
 const getRandcomCard2 = () => {
   let randomCard2 = Math.floor(Math.random() * 52);
   myCard2 = deck[randomCard2];
-  console.log(myCard2);
   console.log(`La segunda carta es ${myCard2.value} ${myCard2.symbol}`);
 };
 
@@ -70,18 +62,17 @@ const askToUserIfTheCardIsMinorOrMayor = () => {
     (answer.toUpperCase() === "MAYOR" && myCard1.value < myCard2.value) ||
     (answer.toUpperCase() === "MENOR" && myCard1.value > myCard2.value)
   ) {
-    alert(`Enhorabuena. ¡Has acertado!`);
+    alert("Enhorabuena. ¡Has acertado!");
     count++;
-    alert(`Tienes ${count} puntos`);
+    alert(`Tienes ${count} puntos `);
   }
   if (
     (answer.toUpperCase() === "MAYOR" && myCard1.value > myCard2.value) ||
     (answer.toUpperCase() === "MENOR" && myCard1.value < myCard2.value)
   ) {
-    alert(`Esta vez no ha habido suerte.`);
+    alert("Esta vez no ha habido suerte.");
   }
 };
-/askToUserIfTheCardIsMinorOrMayor();/;
 
 const allGame = () => {
   totalDeck();
